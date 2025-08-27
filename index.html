@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
@@ -23,6 +24,49 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
+    <header>
+      <nav class="bg-white">
+        <div
+          class="flex flex-col gap-6 md:flex md:flex-row md:justify-between items-center md:px-4 px-[60px] py-6"
+        >
+          <div>
+            <div class="logo flex justify-center items-center gap-3">
+              <img class="w-[25%] md:w-[18%]" src="./assets/logo.png" alt="" />
+              <h1 class="text-3xl md:text-4xl text-[#006747] font-extrabold">
+                Emergency <br />
+                Service
+              </h1>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-4 md:flex-row md:gap-5 justify-center items-center"
+          >
+            <div
+              class="heart flex items-center gap-[10px] bg-[#41ff6b1a] justify-center rounded-[50px] p-3 inter"
+            >
+              <span class="text-[16px] font-black">0</span>
+              <img class="w-[25%]" src="./assets/heart.png" alt="" />
+            </div>
+            <div
+              class="coin flex items-center gap-[10px] bg-[#41ff6b1a] justify-center rounded-[50px] p-3 inter"
+            >
+              <span class="text-[16px] font-black">100</span>
+              <img class="w-[25%]" src="./assets/coin.png" alt="" />
+            </div>
+            <div
+              class="copy-count flex bg-[#00a63e] rounded-[50px] px-9 py-4 inter justify-center"
+            >
+              <p
+                class="text-[16px] font-semibold text-white flex items-center gap-[10px] justify-center"
+              >
+                <span>0</span>
+                <span>Copy</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- linked JavaScript Files -->
     <script src="./js/script.js"></script>
