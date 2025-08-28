@@ -49,15 +49,15 @@ for (const card of cardSection) {
     const div = document.createElement("div");
     div.innerHTML = `
     <div
-              class="call-history-content p-4 mx-6 mb-3 flex justify-between items-center bg-[#FAFAFA] rounded-lg"
+              class="call-history-content p-2 xl:p-4 mx-2 xl:mx-6 mb-3 flex justify-between items-center gap-2 bg-[#FAFAFA] rounded-lg"
             >
               <div class="history-description">
-                <h2 class="inter text-[18px] font-semibold">
+                <h2 class="inter text-[16px] xl:text-[18px] font-medium">
                   ${call.serviceName}
                 </h2>
-                <p class="hind text-[18px] text-[#5C5C5C] font-normal">${call.serviceNumber}</p>
+                <p class="hind text-[16px] xl:text-[18px] text-[#5C5C5C] font-normal">${call.serviceNumber}</p>
               </div>
-              <div class="call-history-date hind text-[18px] font-normal">
+              <div class="call-history-date hind text-[16px] xl:text-[18px] font-normal">
                 <p>${call.date}</p>
               </div>
             </div>`;
