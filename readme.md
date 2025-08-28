@@ -12,6 +12,8 @@
 
 <u>querySelectorAll:</u> It finds all elements that matches a CSS selector.It returns a NodeList.
 
+---
+
 ### <u>Question 02.</u> How do you create and insert a new element into the DOM?
 
 <u>Answer:</u> If you want to create and insert a new element in DOM you can do it in three steps.
@@ -37,6 +39,8 @@ newDiv.style.color = "blue";
 ```js
 document.body.appendChild(newDiv);
 ```
+
+---
 
 ### <u>Question 3.</u> What is Event Bubbling and how does it work?
 
@@ -88,6 +92,8 @@ Because in the DOM, events have a **propagation phase**:
 
 By default, most event listeners in JS work in the **bubbling phase**.
 
+---
+
 ### <u>Question 04.</u> What is Event Delegation in JavaScript? Why is it useful?
 
 <u>Answer:</u> Event Delegation is a method where we put one event listener on a parent element instead of adding event listeners to each child. The parent then checks which child was clicked using event.target and do the work.
@@ -97,6 +103,8 @@ By default, most event listeners in JS work in the **bubbling phase**.
 1. There are fewer event listeners so the performance is faster and better.
 2. When adding new elements dynamically no need to add event listeners again.
 3. By using Event Delegation we can write shorter and cleaner code that is easier to manage.
+
+---
 
 ### <u>Question 05.</u> What is the difference between preventDefault() and stopPropagation() methods?
 
