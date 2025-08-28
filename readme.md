@@ -38,7 +38,7 @@ newDiv.style.color = "blue";
 document.body.appendChild(newDiv);
 ```
 
-#### <u>Question 3.</u> What is Event Bubbling and how does it work?
+### <u>Question 3.</u> What is Event Bubbling and how does it work?
 
 <u>Answer:</u> Event bubbling means when you click (or trigger an event) on an element, the event starts from the innermost element (where it happened) and then **bubbles up** (moves upward) through its parent elements, all the way up to the `document`.
 
@@ -88,7 +88,7 @@ Because in the DOM, events have a **propagation phase**:
 
 By default, most event listeners in JS work in the **bubbling phase**.
 
-#### <u>Question 04.</u> What is Event Delegation in JavaScript? Why is it useful?
+### <u>Question 04.</u> What is Event Delegation in JavaScript? Why is it useful?
 
 <u>Answer:</u> Event Delegation is a method where we put one event listener on a parent element instead of adding event listeners to each child. The parent then checks which child was clicked using event.target and do the work.
 
@@ -98,7 +98,7 @@ By default, most event listeners in JS work in the **bubbling phase**.
 2. When adding new elements dynamically no need to add event listeners again.
 3. By using Event Delegation we can write shorter and cleaner code that is easier to manage.
 
-#### <u>Question 05.</u> What is the difference between preventDefault() and stopPropagation() methods?
+### <u>Question 05.</u> What is the difference between preventDefault() and stopPropagation() methods?
 
 <u>Answer:</u> preventDefault() Example:
 The preventDefault() method is used to stop the browser’s default action. For instance, when you click on a button inside a form, the browser normally submits the form and reloads the page so you can't see the console output you have taken from input. Because default action of the button in a form is to submit the form as you click on the button. But using preventDefault() method you can stop that default action.
