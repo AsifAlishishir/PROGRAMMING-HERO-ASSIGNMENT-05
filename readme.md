@@ -15,6 +15,7 @@
 ### <u>Question 02.</u> How do you create and insert a new element into the DOM?
 
 <u>Answer:</u> If you want to create and insert a new element in DOM you can do it in three steps.
+
 1st Step: First we need to create an element using document.createElement().
 
 ```js
