@@ -42,7 +42,7 @@ document.body.appendChild(newDiv);
 
 <u>Answer:</u> Event bubbling means when you click (or trigger an event) on an element, the event starts from the innermost element (where it happened) and then **bubbles up** (moves upward) through its parent elements, all the way up to the `document`.
 
-#### How it works (step by step):
+#### How it works:
 
 HTML:
 
