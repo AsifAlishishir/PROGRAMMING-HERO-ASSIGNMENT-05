@@ -17,17 +17,25 @@
 <u>Answer:</u> If you want to create and insert a new element in DOM you can do it in three steps.
 1st Step: First we need to create an element using document.createElement().
 
+```js
+const div = document.createElement("div");
+```
+
 2nd Step: We can add text, classes, styles on the div.
 
+```js
 newDiv.textContent = "Hello, DOM!";
 
 newDiv.classList.add("greeting");
 
 newDiv.style.color = "blue";
+```
 
 3rd Step: Now we have to insert the Element into the DOM using appendchild() method in a desired location.
 
+```js
 document.body.appendChild(newDiv);
+```
 
 #### <u>Question 3.</u> What is Event Bubbling and how does it work?
 
@@ -95,13 +103,12 @@ By default, most event listeners in JS work in the **bubbling phase**.
 The preventDefault() method is used to stop the browser’s default action. For instance, when you click on a button inside a form, the browser normally submits the form and reloads the page so you can't see the console output you have taken from input. Because default action of the button in a form is to submit the form as you click on the button. But using preventDefault() method you can stop that default action.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-link.addEventListener('click', function(event) {
+link.addEventListener("click", function (event) {
+  event.preventDefault(); // stops the button from submitting
 
-event.preventDefault(); // stops the button from submitting
-
-alert('Button clicked, but page did not open!');
+  alert("Button clicked, but page did not open!");
 });
 ```
 
@@ -109,12 +116,12 @@ stopPropagation() Example:
 The stopPropagation() method is used to stop an event from moving up (like bubbling) or down (capturing) the DOM tree. For example, if you have a button inside a div and both have click handlers, then clicking the button would also trigger the div’s click handler. By using stopPropagation() on the button’s click event, you can prevent the event from reaching the div, so only the button’s handler runs.
 
 ```js
-const div = document.querySelector('div');
-const button = document.querySelector('button');
+const div = document.querySelector("div");
+const button = document.querySelector("button");
 
-div.addEventListener('click', () => alert('Div clicked!'));
-button.addEventListener('click', (event) => {
-event.stopPropagation(); // stops the click from reaching the div
-alert('Button clicked!');
+div.addEventListener("click", () => alert("Div clicked!"));
+button.addEventListener("click", (event) => {
+  event.stopPropagation(); // stops the click from reaching the div
+  alert("Button clicked!");
 });
 ```
