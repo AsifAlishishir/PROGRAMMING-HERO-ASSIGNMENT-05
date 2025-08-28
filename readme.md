@@ -98,6 +98,29 @@ By default, most event listeners in JS work in the **bubbling phase**.
 
 <u>Answer:</u> Event Delegation is a method where we put one event listener on a parent element instead of adding event listeners to each child. The parent then checks which child was clicked using event.target and do the work.
 
+Example:
+
+```html
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  const list = document.getElementById("myList");
+
+  // Single listener on parent <ul>
+  list.addEventListener("click", function (event) {
+    if (event.target.tagName === "LI") {
+      alert("You clicked on " + event.target.textContent);
+    }
+  });
+</script>
+```
+
+Here, we didn’t attach a listener to each "li", but clicks on "li" elements are still detected via the parent "ul".
+
 #### Why Event Delegation is Useful:
 
 1. There are fewer event listeners so the performance is faster and better.
