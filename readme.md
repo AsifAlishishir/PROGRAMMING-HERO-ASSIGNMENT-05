@@ -95,8 +95,11 @@ By default, most event listeners in JS work in the **bubbling phase**.
 The preventDefault() method is used to stop the browser’s default action. For instance, when you click on a button inside a form, the browser normally submits the form and reloads the page so you can't see the console output you have taken from input. Because default action of the button in a form is to submit the form as you click on the button. But using preventDefault() method you can stop that default action.
 
 const btn = document.querySelector('button');
+
 link.addEventListener('click', function(event) {
+
 event.preventDefault(); // stops the button from submitting
+
 alert('Button clicked, but page did not open!');
 });
 
