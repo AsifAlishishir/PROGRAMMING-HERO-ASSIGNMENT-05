@@ -40,6 +40,8 @@ newDiv.style.color = "blue";
 document.body.appendChild(newDiv);
 ```
 
+Here, I am inserting the 'newDiv' on body.
+
 ---
 
 ### <u>Question 3.</u> What is Event Bubbling and how does it work?
