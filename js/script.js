@@ -43,7 +43,7 @@ for (const card of cardSection) {
     const call = {
       serviceName: cardH2,
       serviceNumber: cardH3,
-      date: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleTimeString("en-US", { hour12: true })
     };
 
     const div = document.createElement("div");
