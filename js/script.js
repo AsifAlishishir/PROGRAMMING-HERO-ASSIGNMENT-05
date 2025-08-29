@@ -1,4 +1,4 @@
-// HEART COUNT EVENT
+// ------------HEART COUNT EVENT----------------
 const heartCountBtns = document.querySelectorAll(".small-heart-btn");
 const heartTotalElement = document.getElementById("heart-Total");
 let heartTotal = parseInt(heartTotalElement.innerText);
@@ -10,27 +10,20 @@ for (const heartBtn of heartCountBtns) {
   });
 }
 
-// CALL EVENT
-// const callCountBtns = document.querySelectorAll(".call-btn");
-// for (const callBtn of callCountBtns) {
-//   callBtn.addEventListener("click", function () {
-
-//   });
-// }
-
-// CALL EVENT
-
+// ------------CALL EVENT-----------------
 const cardSection = document.getElementsByClassName("card-service");
 const coinCount = document.getElementById("coin-count");
 let coinTotal = parseInt(coinCount.innerText);
 const historyCard = document.getElementById("history-card");
 
 for (const card of cardSection) {
+  // --------STORING TITLE NAME, NUMBER AND CALL BUTTON IN VARIABLES-------------
   const cardH2 = card.querySelector("h2").innerText;
   const cardH3 = card.querySelector("h3").innerText;
-
   const callBtn = card.querySelector(".call-btn");
+  // ADDING EVENT TO THE CALL BUTTON
   callBtn.addEventListener("click", function () {
+    // -----------CHECKING IF USER HAS ENOUGH COIN TO MAKE A CALL---------------
     if (coinTotal < 20) {
       alert("❌ insufficient Coin! You need 20 Coin to make a call.");
       return;
@@ -39,13 +32,13 @@ for (const card of cardSection) {
 
     coinTotal -= 20;
     coinCount.innerText = coinTotal;
-
+    // -----------CREATED AN OBJECT TO STORE SERVICE NAME, NUMBER AND LOCAL TIME-------------
     const call = {
       serviceName: cardH2,
       serviceNumber: cardH3,
-      date: new Date().toLocaleTimeString("en-US", { hour12: true })
+      date: new Date().toLocaleTimeString("en-US", { hour12: true }),
     };
-
+    // ---------CREATING A NEW ELEMENT 'div' FOR SHOWING CALL HISTORY AND INSERTING IT IN HISTORYCARD---------
     const div = document.createElement("div");
     div.innerHTML = `
     <div
